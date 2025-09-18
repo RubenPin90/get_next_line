@@ -2,8 +2,7 @@
 
 <br />
 <div align="center">
-  <img width="200" alt="Image" src="https://upload.wikimedia.org/wikipedia/commons/3/35/C_standard_library_logo.png" />
-
+  <h1>get_next_line</h1>
   <p align="center">
     Implementation of the 42 school project <b>get_next_line</b> in C  
     <br />
