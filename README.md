@@ -56,13 +56,13 @@ cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c
 cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line_bonus.c get_next_line_utils_bonus.c main.c -o gnl_bonus
 ```
 
-Usage
+## Usage
 
 ```sh
 ./gnl < testfile.txt
 ```
 
-Example
+## Example
 
 ```c
 int fd = open("example.txt", O_RDONLY);
