@@ -16,9 +16,7 @@
 * [About the Project](#about-the-project)
 * [Implemented Functions](#implemented-functions)
 * [Project Structure](#project-structure)
-* [Build](#build)
 * [Usage](#usage)
-* [Example](#example)
 
 ## About the Project
 
@@ -43,33 +41,42 @@ This repository contains a C implementation of the project, including the mandat
 ├── get_next_line_bonus.h
 └── get_next_line_utils_bonus.c
 ```
+## Usage
 
-## Build
+To use this function, simply include the headers and call get_next_line in your program. For a `main.c`, here an example
+
+#### Example
+
+```c
+include "get_next_line.h"
+
+main() {
+
+  char *line;
+
+  while ((line = get_next_line(STDIN_FILENO)) != NULL)
+  {
+      printf("%s", line);
+      free(line);
+  }
+  close(fd);
+  return(0);
+}
+```
+
+In order to build this add your wished BUFFER_SIZE as a flag. You can also add flags like -Wall -Wextra -Werror for extra security. 
 
 ```sh
 # Compile the mandatory part
-cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c main.c -o gnl
+cc -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c main.c -o gnl
 
 # Compile the bonus part
-cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line_bonus.c get_next_line_utils_bonus.c main.c -o gnl_bonus
+cc -D BUFFER_SIZE=42 get_next_line_bonus.c get_next_line_utils_bonus.c main.c -o gnl_bonus
 ```
-
-## Usage
+Then you can run the program as following:
 
 ```sh
 ./gnl < testfile.txt
 ```
 
-## Example
 
-```c
-int fd = open("example.txt", O_RDONLY);
-char *line;
-
-while ((line = get_next_line(fd)) != NULL)
-{
-    printf("%s", line);
-    free(line);
-}
-close(fd);
-```
