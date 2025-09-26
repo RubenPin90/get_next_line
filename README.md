@@ -36,14 +36,12 @@ This repository contains a C implementation of the project, including the mandat
 ## Project Structure
 
 ```
-get_next_line/
 ├── get_next_line.c          # Core function implementation
 ├── get_next_line.h          # Header file with prototypes
 ├── get_next_line_utils.c    # Utility functions (string operations)
 ├── get_next_line_bonus.c    # Bonus implementation (multi-fd support)
 ├── get_next_line_bonus.h
-├── get_next_line_utils_bonus.c
-└── main.c                   # Example main file for testing
+└──  get_next_line_utils_bonus.c
 ```
 
 ## Build
