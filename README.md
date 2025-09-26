@@ -41,7 +41,7 @@ This repository contains a C implementation of the project, including the mandat
 ├── get_next_line_utils.c    # Utility functions (string operations)
 ├── get_next_line_bonus.c    # Bonus implementation (multi-fd support)
 ├── get_next_line_bonus.h
-└──  get_next_line_utils_bonus.c
+└── get_next_line_utils_bonus.c
 ```
 
 ## Build
